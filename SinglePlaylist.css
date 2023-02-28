@@ -1,0 +1,482 @@
+/* Common Sections */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #001a33;
+    width: 100%;
+    height: 100vh;
+    font-family: cursive;
+}
+main{
+    /* height: 90%; */
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    height: 1600px;
+    width: 950px;
+    margin-left: 50px;  
+    padding-top: 100px;
+}
+
+/* Navigation Section */
+
+nav{
+    width: 90%;
+    height: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    bottom: 10px;
+    z-index: 100;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    position: relative;
+    font-size: 20px;
+    margin-right: 50px;
+    top: 15px;
+}
+nav ul li img{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: -10px;
+    left: -35px;
+}
+#name{
+    position: relative;
+    font-size: 25px;
+    left: -70px;
+    top: 0;
+}
+#favourites{
+    position: relative;
+    font-size: 20px;
+    left: 40px;
+}
+nav .search{
+    position: relative;
+    width: 21%;
+    height: 40%;
+    border-radius: 20px;
+    background-color: darkslategray;
+    padding: 0px 10px;
+    left: 320px;
+}
+nav .search input{
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 5px 10px;
+    color: white;
+    font-size: 15px;
+    font-family: cursive;
+}
+nav .search .fa-magnifying-glass{
+    font-size: 18px;
+    position: relative;
+}
+nav .search .fa-microphone{
+    font-size: 18px;
+    position: relative;
+    left: 9px;
+}
+nav .notification .fa-bell{
+    position: relative;
+    font-size: 21px;
+    left: 150px;
+}
+nav .notification .red_dot{
+    position: relative;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: red;
+    top: -20px;
+    left: 162px;
+}
+nav .user{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+nav .user img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #121213;
+}
+
+
+/* Aside Section  */
+
+.playlist::-webkit-scrollbar {
+    width: 0px;    
+}
+.similar::-webkit-scrollbar {
+    width: 0px;    
+}
+  
+.playlist{
+    color: white;
+    position: fixed;
+    right:10px;
+    left: 1020px;
+    top: 350px;
+    bottom:0px;
+    height: 300px;
+    overflow: auto;
+}
+.playlist h1{
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.playlist h1,h4{
+    display: inline-block;
+}
+.playlist h4{
+    margin-left: 35%;
+    color: grey;
+    font-size: 13px;
+}
+.playlist h4:hover{
+    color: rgb(9, 58, 122);
+    font-size: 12px;
+    cursor: pointer;
+}
+.song-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    transition: .2s;
+}
+.song-container:hover{
+    background-color:rgb(9, 58, 122);
+    cursor: pointer;
+    color: grey;
+}
+.song-container img{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 17px 2px#242020;
+}
+.song-container .index{
+    font-size: 13px;
+    color: grey;
+    padding-left: 10px;
+}
+.song-container i{
+    margin-right: 5%;
+}
+.song-info{
+    margin-left: 10px;
+    width: 210px;
+}
+.song-info p:nth-child(1){
+    font-size: 13px;
+}
+.song-info p:nth-child(2){
+    font-size: 12px;
+    padding-top: 5px;
+    color: grey;
+}
+.similar{
+    color: white;
+    position: fixed;
+    right:10px;
+    left: 1020px;
+    top:80px;
+    bottom:55%;
+    overflow: auto;
+}
+.similar h1{
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.similar h1,h4{
+    display: inline-block;
+}
+.similar h4{
+    margin-left: 20%;
+    color: grey;
+    font-size: 13px;
+}
+.similar h4:hover{
+    color:rgb(9, 58, 122);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* Main Body Section  */
+
+.artist-page {
+    background: rgb(9, 58, 122);
+    height: 380px;
+}
+.artist-page img {
+    width: 250px;
+    height: 100%;
+    opacity: 0.8;
+}
+.artist-details {
+    display: flex;
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+.singer-name {
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 50%;
+    display: inline-block;
+}
+.followers {
+    font-size: 15px;
+    color: lightblue;
+} 
+.singer-desc {
+    width: 70%;
+    margin-left: 275px;
+    color: lightcyan;
+    font-size: 13px;
+    text-align: left;
+    margin-top: -310px;
+    vertical-align: top;
+    margin-bottom: 65px;
+}
+.artist-page button {
+    margin-left: 300px;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-style: none;
+    cursor: pointer;
+    transition: .15s;
+    background: linear-gradient(to right, #3524AF, #B845DB);
+}
+.artist-page button:hover {
+    color: grey;
+}
+.artist-page .follow {
+    margin-left: 50px;
+}
+.artist-page .follow:hover {
+    color: grey;
+    cursor: pointer;
+}
+.tracks {
+    margin-left: 32%;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.songs-container {
+    padding-top: 30px;
+    width: 100%;
+}
+  
+.songs {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.songs:hover {
+    background-color: #0a121a;
+    transition: .3s linear;
+}
+  
+.songs .index {
+    padding: 10px;
+    font-size: 14px;
+}
+.songs img {
+    width: 50px;
+    height: 50px;
+}
+  
+.songs .name {
+    margin-left: 2%;
+    width: 40%;
+    font-size: 17px;
+}
+.songs .artist {
+    margin-left: 10%;
+    font-size: 13px;
+    width: 20%;
+}  
+.songs i {
+    margin-left: 3%;
+}
+.spacer{
+    height: 15vh;
+    width: 100%;
+}
+
+/* Footer Section */
+
+main .footer{
+    width: 100%;
+    height: 08%;
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+    background-color: darkslategray;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+main .footer img{
+    width: 50px;
+    height: 50px;
+}
+main .footer h5{
+    width: 80px;
+    margin-left: 10px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 100;
+}
+main .footer h5 .subtitle{
+    font-size: 11px;
+    width: 100%;
+    overflow: hidden;
+}
+main .footer i{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+main .footer .icon{
+    font-size: 20px;
+    margin: 0px 20px 0px 50px;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+main .footer .icon .fa-regular{
+    font-size: 30px;
+    margin: 0px 10px 0px 20px;
+    cursor: pointer;
+    outline: none;
+}
+main .footer .icon .fa-solid{
+    margin: 0px 10px 0px 20px;
+    cursor: pointer;
+    outline: none;
+}
+main .footer span{
+    width: 30px;
+    font-size: 13px;
+}
+main .footer #currentStart{
+    margin: 0px 0px 0px 20px;
+}
+main .footer .bar{
+    position: relative;
+    width: 30%;
+    height: 2px;
+    background: whitesmoke;
+    margin: 0px 15px 0px 10px;
+}
+main .footer .bar .bar2{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: greenyellow;
+    top: 0;
+    transition: 1s linear;
+}
+main .footer .bar .dot{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    left: 50%;
+    top: -4px;
+    transition: 1s linear;
+}
+main .footer .bar input{
+    position: absolute;
+    width: 100%;
+    top: -9px;
+    left: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+}
+main .footer .slider{
+    margin: 0px 10px 0px 30px;
+    cursor: pointer;
+}
+main .footer .download{
+    margin: 0px 5px 0px 20px;
+    cursor: pointer;
+}
+main .footer .vol{
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background: white;
+    margin-left: 50px;
+}
+main .footer .vol .fa-solid{
+    position: absolute;
+    top: -6px;
+    left: -40px;
+    cursor: pointer;
+}
+main .footer .vol input{
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+}
+main .footer .vol .vol_bar{
+    position: absolute;
+    background: greenyellow;
+    width: 40%;
+    height: 2px;
+    top: 0;
+    transition: 1s linear;
+}
+main .footer .vol .dot{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    left: 40px;
+    right: 0;
+    top: -4px;
+    transition: 1s linear;
+}
+main .footer .enlarge{
+    margin: 0px 10px 0px 30px;
+}
